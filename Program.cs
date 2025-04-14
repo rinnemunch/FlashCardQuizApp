@@ -10,17 +10,27 @@ string[] answers = {
     "Blue"
 };
 
+Console.WriteLine("=== Flashcard Quiz ===\n");
+
+int score = 0;
+
 for (int i = 0; i < questions.Length; i++)
 {
-    Console.WriteLine(questions[i]);
+    Console.WriteLine($"Q{i + 1}: {questions[i]}");
+    Console.Write("Your answer: ");
     string userAnswer = Console.ReadLine() ?? "";
 
     if (userAnswer.ToLower() == answers[i].ToLower())
     {
-        Console.WriteLine("Correct!\n");
+        Console.WriteLine("✅ Correct!\n");
+        score++;
     }
     else
     {
-        Console.WriteLine($"Wrong. The correct answer is: {answers[i]}\n");
+        Console.WriteLine($"❌ Wrong. Correct answer: {answers[i]}\n");
     }
 }
+
+Console.WriteLine("=== Quiz Complete ===");
+Console.WriteLine($"Score: {score} / {questions.Length}");
+
