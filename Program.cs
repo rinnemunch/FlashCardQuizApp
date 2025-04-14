@@ -9,3 +9,18 @@ string[] answers = {
     "Paris",
     "Blue"
 };
+
+for (int i = 0; i < questions.Length; i++)
+{
+    Console.WriteLine(questions[i]);
+    string userAnswer = Console.ReadLine() ?? "";
+
+    if (userAnswer.ToLower() == answers[i].ToLower())
+    {
+        Console.WriteLine("Correct!\n");
+    }
+    else
+    {
+        Console.WriteLine($"Wrong. The correct answer is: {answers[i]}\n");
+    }
+}
