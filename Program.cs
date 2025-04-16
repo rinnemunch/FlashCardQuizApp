@@ -1,13 +1,17 @@
 ﻿string[] questions = {
     "What is 5 + 3?",
     "What is the capital of France?",
-    "What color is the sky on a clear day?"
+    "What color is the sky on a clear day?",
+    "What planet do we live on?",
+    "What is the opposite of cold?"
 };
 
 string[] answers = {
     "8",
     "Paris",
-    "Blue"
+    "Blue",
+    "Earth",
+    "Hot"
 };
 
 Console.WriteLine("=== Flashcard Quiz ===\n");
